@@ -1,0 +1,229 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Coiny', cursive;
+    font-size: 20px;
+}
+
+body{
+    background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: #fff;
+}
+
+*::selection{
+    background: #33257e;
+    color: beige;
+}
+
+.contenedor{
+    max-width: 500px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+.logo{
+    margin-bottom: 40px;
+    width: 25%;
+    position: relative;
+    right: -150px;
+}
+
+.logo img{
+    width: 100%;
+  
+}
+
+.app .fila{
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.app .col{
+    width: 50%;
+}
+
+.app label{
+    line-height: 40px;
+
+}
+
+.app input{
+    text-align: center;
+    border: none;
+}
+
+.app .buton{
+    width: 100%;
+    background: #684bff;
+    display: inline-block;
+    height: 40px;
+    vertical-align: top;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all, 2s ease;
+}
+
+.app .buton:hover{
+    background: #b4b5ff;
+}
+
+.app .num-caracteres .botones div{
+    width: 100%;
+
+}
+
+.app .num-caracteres .botones div:nth-child(1) button{
+    border-radius: 10px 0 0 10px;
+}
+
+.app .num-caracteres input{
+    height: 40px;
+    width: 100%;
+    cursor: default;
+    background: #33257e;
+    color: white;
+}
+
+.app .num-caracteres .botones div:nth-child(3) button{
+    border-radius: 0px 10px 10px 0;
+}
+
+.app .num-caracteres .botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.app .fila.generar{
+    margin-bottom: 10px;
+}
+
+.app .fila.generar .col:nth-child(1){
+    width: 30%;
+}
+
+.app .fila.generar .col:nth-child(2){
+    width: 65%;
+}
+
+.app .fila.generar .buton.btn-generar{
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    padding: 0;
+    line-height: 40px;
+    position: relative;
+}
+
+.app .fila.generar .buton.btn-generar i{
+    margin-left: 20px;
+    position: relative; 
+    top: -1px;
+    font-size: 15px;
+}
+
+.app .fila.generar .buton.btn-generar::after{
+    content: "";
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background: #684bff;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 13px;
+    right: -3px; 
+    transition: all .2s ease;
+
+}
+
+.app .fila.generar .col:nth-child(1):hover .buton.btn-generar::after{
+    background: #b4b5ff;
+}
+
+.app .fila.generar .input-password{
+    width: 100%;
+    background: none;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,.25);
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all .2s ease;
+} 
+
+.app .fila.generar .input-password:hover{
+    border: 1px solid rgba(255,255,255,.50);
+}
+
+.app .fila.generar input::selection{
+    background: #212139;
+}
+
+.app .fila.alerta{
+    position: absolute;
+    justify-content: flex-end;
+}
+
+.app .fila.alerta .alerta-copiado{
+    width: 65%;
+}
+
+.app .fila.alerta{
+    width: 65%;
+}
+
+.app .fila.alerta .alerta-copiado{
+    text-align: center;
+    color: rgba(255,255,255,0);
+    transition: all .2s ease;
+}
+
+
+.app .fila.alerta .alerta-copiado.active{
+    color: rgba(255,255,255,1);
+}
+
+.app .fila.alerta .alerta-copiado p, 
+.app .fila.alerta .alerta-copiado i{
+    font-size: 12px;
+}
+
+@media screen and (max-width: 500px){
+   .logo img{
+       width: 90%;
+   } 
+   .app .fila{
+       flex-direction: column;
+       margin-bottom: 20px;
+   } 
+   .app .fila .col{
+       width: 100%;
+       margin-bottom: 20px;
+   }
+
+   .app .fila.generar{
+       border-top: 1px solid rgba(255,255,255,.25);
+       padding-top: 40px; 
+   }
+
+   .app .fila.generar .col:nth-child(1),
+   .app .fila.generar .col:nth-child(2){
+     width: 100%;  
+   }
+
+   .app .fila.generar .buton.btn-generar::after{
+    top:auto;
+    left: 50%;
+    right: 50%;
+    bottom: -7px;
+   }
+}
